@@ -50,4 +50,16 @@ blogsever
 
 ## Springboot 一些常用的@注解
 
+- @RequestMapping: 映射请求，也就是通过它来指定控制器可以处理哪些URL请求, 其中method定义接收浏览器发来的何种请求，GET（查）、POST（增）、PUT（改）、DELETE（删）.
+- @Controller: （处理http请求）表示在tomcat启动的时候，把这个类作为一个控制器加载到Spring的Bean工厂
+- @ResponseBody： 主要用来接收前端传递给后端的json字符串中的数据，前端只能用POST的方式进行提交
+- @RestController: @controller 和 @RequestBody 的组合注解.
+- @autowired: 根据属性类型在容器中寻找bean类，并装配进去
+    E.g @Autowired
+        Newservice newservice
+    就是中岛Newservice类型中的bean，自动匹配，并把bean装配到newservice中
+- @service：（用在业务层）告诉springboot创建一个实现类的实列，就不用配置bean了 （？不太确定）
+- @Transcactional: 声明式的注解业务管理
+- @Mapper: 该接口类的实现类对象交给mybatis底层创建，然后交由Spring框架管理
+
 
